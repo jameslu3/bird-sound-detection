@@ -8,7 +8,7 @@ def create_efficientnet_lstm_model(CFG):
     #inp = keras.layers.Input(shape=(None, None, 3))
     
     # Load the EfficientNet backbone
-    backbone = keras_cv.models.EfficientNetB0Backbone.from_preset(
+    backbone = keras_cv.models.EfficientNetV2Backbone.from_preset(
         CFG.preset,
     )
 

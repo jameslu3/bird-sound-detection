@@ -27,11 +27,18 @@ We have 5 (relevant) files in this (Note: a lot of the files include some simila
 
 If you want to run this yourself, you only really need to use the birdclef-initial-implementation.ipynb and run the code from top to bottom (also download the dataset from Kaggle and place it into a data folder). In the middle, you are able to choose which of our 4 models you want to use, so choose one and run that. Your model will be saved to the models folder for later use if you wish. 
 
+If you want to run the tSNE file, just simply place whatever model you wish to load into the tSNE and run the code to see how well the model can extract features and differentiate between classes
+
 -----
-Regarding our results, we found that despite the varying complexities of the models are their number of parameters, the results were extremely similar (with the hybrid models performing worse): 
+Regarding our results, we found that despite the varying complexities of the models and their number of parameters, the results were extremely similar (with the hybrid models performing worse): 
 
 Validation AUC
 - ResNet: 0.9572
 - EfficientNet: 0.9616
 - ResNet-LSTM: 0.9043
-- EfficientNet-LSTM: TBA 
+- EfficientNet-LSTM: TBA
+
+Regarding the tSNE, here are some examples of the outputs from the EfficientNet-based model:
+![image](https://github.com/user-attachments/assets/4d733a52-7a9c-4dd4-9737-6c648902c031)
+
+![image](https://github.com/user-attachments/assets/06d16ee5-88ef-42e5-9486-9a2c5ede7daa)

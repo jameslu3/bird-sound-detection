@@ -18,11 +18,12 @@ We also created a separate, but similar pipeline for the ResNet-LSTM model:
 
 Here is a link to the dataset we used: https://www.kaggle.com/competitions/birdclef-2024/data
 
-We have 5 (relevant) files in this (Note: a lot of the files include some similar code due to us splitting the workload and working on separate things at the same time): 
+We have 6 (relevant) files in this (Note: a lot of the files include some similar code due to us splitting the workload and working on separate things at the same time): 
 - birdclef24-initial-implementation.ipynb: File that includes most of the data preprocessing and processing steps as well as the code for the training of each of our 4 models (ResNet, EfficientNet, ResNet-LSTM, EfficientNet-LSTM)
 - birdclef24-LSTM.ipynb: File that actually has the output for the CRNN model
 - resnet_lstm.py: Code for the architecture of the ResNet-LSTM model
 - efficientnet_lstm.py: Code for the architecture of the EfficientNet-LSTM model
+- RNNv2.ipynb: File that includes implementation and execution of RNN model 
 - tSNE.ipynb: Visualization of our basic EfficientNet-based model and how well it can extract features from the data
 
 If you want to run this yourself, you only really need to use the birdclef-initial-implementation.ipynb and run the code from top to bottom (also download the dataset from Kaggle and place it into a data folder). In the middle, you are able to choose which of our 4 models you want to use, so choose one and run that. Your model will be saved to the models folder for later use if you wish. 
@@ -36,7 +37,7 @@ Validation AUC
 - ResNet: 0.9572
 - EfficientNet: 0.9616
 - ResNet-LSTM: 0.9043
-- EfficientNet-LSTM: TBA
+- EfficientNet-LSTM: 0.8903
 
 Regarding the tSNE, here are some examples of the outputs from the EfficientNet-based model:
 ![image](https://github.com/user-attachments/assets/4d733a52-7a9c-4dd4-9737-6c648902c031)

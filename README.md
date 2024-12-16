@@ -14,7 +14,13 @@ We also created a separate, but similar pipeline for the ResNet-LSTM model:
 - Data Pipeline: Same as before, but also split each spectrogram into equally sized slices based on user set time steps, and build dataset using these chronologically ordered slices
 - Data Augmentation: Same as before
 - Modeling and Training: Similar to model before, but instead use time distributed input and pooling layer to apply model to each slice in spectrogram
-  - Use previous model to output a sequence of feature maps that preserves the time dimension, and then input this sequence of feature maps into an LSTM layer that's then connected to the previously mentioned dropout and fully connnected softmax output layer 
+  - Use previous model to output a sequence of feature maps that preserves the time dimension, and then input this sequence of feature maps into an LSTM layer that's then connected to the previously mentioned dropout and fully connnected softmax output layer
+ 
+We further also have a different pipeline for the LSTM model: 
+- Data Preprocessing: Extract MFCC Features
+- Data Pipeline: Pad or truncate the features to fixed length, add to array, and then one-hot encode the labels  
+- Data Augmentation: Not implemented
+- Modeling and Training: Pass data through two LSTM layers connected to a 2 fully connected layers 
 
 Here is a link to the dataset we used: https://www.kaggle.com/competitions/birdclef-2024/data
 
@@ -34,8 +40,8 @@ If you want to run the tSNE file, just simply place whatever model you wish to l
 Regarding our results, we found that despite the varying complexities of the models and their number of parameters, the results were extremely similar (with the hybrid models performing worse): 
 
 Validation AUC
-- ResNet: 0.9572
-- EfficientNet: 0.9616
+- ResNet: 0.9616
+- EfficientNet: 0.9572
 - ResNet-LSTM: 0.9043
 - EfficientNet-LSTM: 0.8903
 
